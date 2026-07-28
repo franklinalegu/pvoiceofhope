@@ -4313,3 +4313,375 @@ main > section:not(.hero-orenda):not(.page-banner):not(.story-hero) > .container
     justify-content:flex-end!important;
   }
 }
+
+/* Comprehensive mobile responsiveness hardening */
+*,*::before,*::after{box-sizing:border-box;}
+html,body{max-width:100%;overflow-x:hidden;}
+img,video,canvas,svg{max-width:100%;height:auto;}
+@media (max-width: 980px){
+  :root{
+    --mobile-page-gutter: 20px;
+  }
+  body{min-width:0!important;}
+  .container,
+  main > section:not(.hero-orenda):not(.story-hero):not(.page-banner) > .container,
+  .fullwidth-flagship > .container,
+  .fullwidth-pathways > .container,
+  .story-hover-showcase > .container,
+  .refined-stories > .container,
+  .blog-list-section > .container{
+    width:min(calc(100% - var(--mobile-page-gutter)), var(--ref-max))!important;
+    max-width:100%!important;
+    padding-left:0!important;
+    padding-right:0!important;
+  }
+  main > section:not(.hero-orenda):not(.story-hero):not(.page-banner),
+  .fullwidth-flagship,
+  .fullwidth-pathways,
+  .story-hover-showcase,
+  .refined-stories,
+  .homepage-faq,
+  .persona-journey,
+  .pathways-process-section,
+  .simple-process-section,
+  .about-story-section,
+  .about-mission-section,
+  .about-serve-section,
+  .about-work-section,
+  .about-values-section,
+  .about-trust-section,
+  .programs-entry-section,
+  .programs-feature-section,
+  .programs-pathways-section,
+  .programs-start-section,
+  .programs-info-section,
+  .programs-cta-section,
+  .lm-intro-section,
+  .lm-roles-section,
+  .lm-flow-section,
+  .lm-commitment-section,
+  .sg-intro-section,
+  .sg-standards-section,
+  .sg-report-section,
+  .sg-flow-section,
+  .blog-list-section,
+  .landing-proof,
+  .landing-mission,
+  .landing-campaign,
+  .landing-purpose,
+  .landing-focus,
+  .landing-stories,
+  .landing-events,
+  .landing-insights,
+  .landing-faq{
+    width:100%!important;
+    max-width:100%!important;
+    margin:0!important;
+    border-radius:0!important;
+    overflow:hidden!important;
+    padding-block:56px!important;
+  }
+  .header,
+  .header.hero-nav{
+    position:sticky!important;
+    top:0!important;
+    left:auto!important;
+    right:auto!important;
+    height:auto!important;
+    min-height:56px!important;
+    background:rgba(251,250,247,.92)!important;
+    border-bottom:1px solid var(--ref-line-soft)!important;
+    backdrop-filter:blur(18px) saturate(1.08)!important;
+    -webkit-backdrop-filter:blur(18px) saturate(1.08)!important;
+    pointer-events:auto!important;
+  }
+  .header .nav-wrap,
+  .header.hero-nav .nav-wrap{
+    width:min(calc(100% - 20px), var(--ref-max))!important;
+    height:56px!important;
+    min-height:56px!important;
+    padding:0!important;
+    margin:0 auto!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:flex-end!important;
+    position:relative!important;
+    pointer-events:auto!important;
+  }
+  .header .brand-logo{display:none!important;}
+  .mobile-menu-toggle{
+    display:inline-flex!important;
+    width:42px!important;
+    height:42px!important;
+    min-width:42px!important;
+    min-height:42px!important;
+    padding:0!important;
+    align-items:center!important;
+    justify-content:center!important;
+  }
+  .header .header-cta{display:none!important;}
+  .header .nav{display:none!important;}
+  .header.mobile-menu-open .nav{display:none!important;}
+  .mobile-menu-panel{
+    width:min(90vw, 420px)!important;
+  }
+  .mobile-menu-panel-inner{
+    padding:28px 22px 34px!important;
+  }
+  .mobile-menu-actions{
+    grid-template-columns:1fr!important;
+    gap:10px!important;
+    margin-bottom:26px!important;
+  }
+  .mobile-menu-action{
+    min-height:50px!important;
+  }
+  .mobile-menu-links a{
+    min-height:60px!important;
+    font-size:clamp(24px, 7vw, 34px)!important;
+  }
+  .mobile-menu-secondary{gap:8px!important;}
+}
+
+@media (max-width: 760px){
+  :root{
+    --type-hero: clamp(36px, 10.8vw, 52px);
+    --type-h1: clamp(32px, 9vw, 46px);
+    --type-h2: clamp(27px, 7vw, 38px);
+    --type-h3: clamp(20px, 5.5vw, 26px);
+    --type-body: 15.5px;
+  }
+  .h1,h1,.hero-orenda-content h1,.story-slide-title{font-size:var(--type-hero)!important;line-height:1.02!important;}
+  .h2,h2,.section-head h2,.landing-section-head h2,.pathways-process-head h2,.persona-journey-copy h2,.page-banner-content h1{font-size:var(--type-h2)!important;line-height:1.08!important;}
+  p,.lead,.page-banner-content p,.hero-orenda-content p,.landing-mission-copy p,.landing-purpose p,.article-body p{font-size:var(--type-body)!important;line-height:1.6!important;}
+  .kicker,.page-banner-kicker,.hero-orenda-kicker{font-size:11px!important;letter-spacing:.08em!important;}
+
+  /* Home hero */
+  .hero.hero-orenda{min-height:auto!important;}
+  .hero.hero-orenda > .container{width:100%!important;max-width:none!important;}
+  .hero-orenda-card{
+    min-height:auto!important;
+    padding:300px 18px 24px!important;
+    display:flex!important;
+    flex-direction:column!important;
+    justify-content:flex-end!important;
+  }
+  .hero-orenda-bg{width:100%!important;height:100%!important;object-position:center top!important;animation:none!important;transform:none!important;}
+  .hero-orenda-content{position:relative!important;left:auto!important;right:auto!important;bottom:auto!important;width:100%!important;max-width:100%!important;}
+  .hero-orenda-actions{display:grid!important;grid-template-columns:1fr!important;gap:10px!important;margin-top:18px!important;}
+  .hero-orenda-btn{width:100%!important;min-width:0!important;min-height:46px!important;font-size:14px!important;padding:6px 7px 6px 16px!important;}
+  .hero-orenda-btn i{width:34px!important;height:34px!important;}
+  .hero-trust-row,.hero-bottom-strip{display:none!important;}
+  .hero-orenda-feature{position:relative!important;left:auto!important;right:auto!important;bottom:auto!important;width:100%!important;margin-top:14px!important;grid-template-columns:68px minmax(0,1fr) 24px!important;min-height:92px!important;padding:10px!important;}
+  .hero-orenda-feature img{width:68px!important;height:68px!important;}
+  .hero-orenda-feature strong{font-size:15px!important;}
+  .hero-orenda-feature small,.hero-feature-action{font-size:11px!important;}
+  .hero-orenda-stack,.hero-orenda-stack:before,.hero-orenda-stack:after{display:none!important;}
+
+  /* Inner page banners */
+  .page-banner{min-height:auto!important;}
+  .page-banner-inner{min-height:430px!important;width:min(calc(100% - 28px), var(--ref-max))!important;display:flex!important;flex-direction:column!important;justify-content:flex-end!important;align-items:stretch!important;gap:14px!important;padding:92px 0 28px!important;}
+  .page-banner-content{width:100%!important;}
+  .page-banner-card{width:100%!important;min-height:auto!important;padding:18px!important;border-radius:16px!important;}
+
+  /* All multi-column layouts */
+  .landing-mission-grid,
+  .landing-campaign-inner,
+  .landing-purpose-grid,
+  .landing-focus-grid,
+  .landing-events-grid,
+  .landing-faq-grid,
+  .landing-proof-grid,
+  .landing-story-grid,
+  .landing-insight-grid,
+  .persona-journey-grid,
+  .feature-grid,
+  .pathways-process-grid,
+  .refined-story-grid,
+  .homepage-faq-grid,
+  .about-story-grid,
+  .about-serve-grid,
+  .about-card-grid,
+  .programs-entry-grid,
+  .programs-feature-card,
+  .programs-pathways-grid,
+  .programs-start-grid,
+  .programs-info-grid,
+  .lm-intro-grid,
+  .lm-card-grid,
+  .lm-flow-grid,
+  .sg-intro-grid,
+  .sg-card-grid,
+  .sg-flow-grid,
+  .sg-report-grid,
+  .blog-list-grid,
+  .footer-grid,
+  .pv-footer-grid-new{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:16px!important;
+  }
+
+  .landing-mission-media,.persona-journey-visual{min-height:430px!important;}
+  .mission-photo-main,.persona-journey-photo-main{width:82%!important;height:62%!important;}
+  .mission-photo-small,.persona-journey-photo-small{width:52%!important;height:34%!important;}
+  .persona-journey-quote{width:86%!important;right:0!important;top:42%!important;padding:18px!important;}
+  .landing-campaign-card,.landing-event-list a,.landing-insight-card,.blog-list-card a{display:grid!important;grid-template-columns:86px minmax(0,1fr)!important;gap:12px!important;}
+  .landing-campaign-card img,.landing-event-list img,.landing-insight-card img{width:86px!important;height:70px!important;}
+  .landing-purpose figure,.about-story-image,.article-image{min-height:240px!important;height:auto!important;}
+  .landing-purpose figure img,.about-story-image img,.article-image img{min-height:240px!important;height:240px!important;}
+  .donut{width:160px!important;height:160px!important;}
+  .donut span{width:104px!important;height:104px!important;font-size:32px!important;}
+
+  .btn,.btn.light,.btn.soft,.hero-orenda-btn,.pv-footer-cta-actions .btn,.footer-find-place .btn,.actions .btn{width:100%!important;min-height:44px!important;padding:0 16px!important;justify-content:center!important;}
+  .actions,.actions.center,.pv-footer-cta-actions,.footer-find-place .actions{display:grid!important;grid-template-columns:1fr!important;gap:9px!important;width:100%!important;}
+  .faq-q{min-height:46px!important;padding:14px 0!important;font-size:15px!important;}
+  .faq-a div{padding:0 0 16px!important;}
+
+  .pv-footer-redesign{padding-bottom:0!important;}
+  .pv-footer-shell{padding-top:42px!important;}
+  .footer-find-place,.pv-footer-card{border-radius:0!important;width:100%!important;}
+}
+@media (max-width:420px){
+  .hero-orenda-card{padding-top:260px!important;}
+  .page-banner-inner{min-height:390px!important;}
+}
+
+/* Final mobile responsive lock: prevent overflow and normalize all page layouts */
+@media (max-width: 980px){
+  body{
+    overflow-x:hidden!important;
+  }
+  main,
+  section,
+  .container,
+  .page-banner-inner,
+  .hero-orenda-card,
+  .mobile-menu-panel,
+  .pv-footer-redesign,
+  .pv-footer-shell,
+  .pv-footer-card{
+    max-width:100%!important;
+  }
+  .landing-proof-grid,
+  .landing-mission-grid,
+  .landing-campaign-inner,
+  .landing-purpose-grid,
+  .landing-focus-grid,
+  .landing-story-grid,
+  .landing-events-grid,
+  .landing-insight-grid,
+  .landing-faq-grid,
+  .about-story-grid,
+  .about-card-grid,
+  .about-serve-grid,
+  .about-work-section .about-card-grid,
+  .programs-entry-grid,
+  .programs-feature-card,
+  .programs-pathways-grid,
+  .programs-start-grid,
+  .programs-info-grid,
+  .lm-intro-grid,
+  .lm-card-grid,
+  .lm-flow-grid,
+  .sg-intro-grid,
+  .sg-card-grid,
+  .sg-flow-grid,
+  .sg-report-grid,
+  .blog-list-grid,
+  .refined-story-grid,
+  .pathways-process-grid,
+  .simple-process-grid,
+  .feature-grid,
+  .footer-grid,
+  .pv-footer-grid-new{
+    grid-template-columns:1fr!important;
+  }
+  .landing-event-list a,
+  .landing-insight-card,
+  .blog-list-card a,
+  .landing-campaign-card{
+    grid-template-columns:88px minmax(0,1fr)!important;
+  }
+  .landing-event-list img,
+  .landing-insight-card img,
+  .landing-campaign-card img{
+    width:88px!important;
+    height:72px!important;
+    object-fit:cover!important;
+  }
+}
+
+@media (max-width: 640px){
+  .container{
+    width:calc(100% - 24px)!important;
+  }
+  .hero-orenda-card{
+    padding-left:16px!important;
+    padding-right:16px!important;
+  }
+  .page-banner-inner{
+    width:calc(100% - 24px)!important;
+  }
+  .landing-proof,
+  .landing-mission,
+  .landing-campaign,
+  .landing-purpose,
+  .landing-focus,
+  .landing-stories,
+  .landing-events,
+  .landing-insights,
+  .landing-faq,
+  .about-story-section,
+  .about-mission-section,
+  .about-serve-section,
+  .about-work-section,
+  .about-values-section,
+  .about-trust-section,
+  .programs-entry-section,
+  .programs-feature-section,
+  .programs-pathways-section,
+  .programs-start-section,
+  .programs-info-section,
+  .programs-cta-section,
+  .blog-list-section,
+  .refined-stories,
+  .homepage-faq{
+    padding-top:48px!important;
+    padding-bottom:48px!important;
+  }
+  .landing-event-list a,
+  .landing-insight-card,
+  .blog-list-card a,
+  .landing-campaign-card{
+    grid-template-columns:1fr!important;
+  }
+  .landing-event-list img,
+  .landing-insight-card img,
+  .blog-list-card img,
+  .landing-campaign-card img{
+    width:100%!important;
+    height:210px!important;
+  }
+  .refined-story-card img{
+    height:220px!important;
+  }
+  .pv-footer-redesign{
+    padding-bottom:0!important;
+  }
+}
+
+@media (max-width: 380px){
+  .hero-orenda-content h1,
+  .page-banner-content h1{
+    font-size:34px!important;
+  }
+  .h2,
+  h2{
+    font-size:26px!important;
+  }
+  .btn,
+  .hero-orenda-btn{
+    font-size:13px!important;
+  }
+}
