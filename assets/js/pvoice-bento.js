@@ -41,6 +41,43 @@
       dots.forEach(function(d,idx){d.addEventListener('click',function(){show(idx);start()})}); if(prev) prev.addEventListener('click',function(){show(i-1);start()}); if(next) next.addEventListener('click',function(){show(i+1);start()}); slider.addEventListener('mouseenter',stop); slider.addEventListener('mouseleave',start); show(0); start();
     });
 
+
+
+    document.querySelectorAll('.mobile-menu-toggle').forEach(function(toggle){
+      toggle.addEventListener('click', function(){
+        var header = toggle.closest('.header');
+        if(!header) return;
+        var open = header.classList.toggle('mobile-menu-open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      });
+    });
+
+    document.querySelectorAll('.header .nav a').forEach(function(link){
+      link.addEventListener('click', function(){
+        var header = link.closest('.header');
+        if(!header) return;
+        header.classList.remove('mobile-menu-open');
+        var toggle = header.querySelector('.mobile-menu-toggle');
+        if(toggle){
+          toggle.setAttribute('aria-expanded','false');
+          toggle.setAttribute('aria-label','Open menu');
+        }
+      });
+    });
+
+    document.addEventListener('click', function(event){
+      document.querySelectorAll('.header.mobile-menu-open').forEach(function(header){
+        if(header.contains(event.target)) return;
+        header.classList.remove('mobile-menu-open');
+        var toggle = header.querySelector('.mobile-menu-toggle');
+        if(toggle){
+          toggle.setAttribute('aria-expanded','false');
+          toggle.setAttribute('aria-label','Open menu');
+        }
+      });
+    });
+
     var reveals=document.querySelectorAll('.reveal');
     if('IntersectionObserver' in window){var obs=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('in');obs.unobserve(entry.target)}})},{threshold:.13,rootMargin:'0px 0px -60px 0px'}); reveals.forEach(function(el){obs.observe(el)})} else {reveals.forEach(function(el){el.classList.add('in')})}
   });

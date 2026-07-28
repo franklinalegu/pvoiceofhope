@@ -2795,3 +2795,85 @@ main > section:not(.hero-orenda):not(.page-banner):not(.story-hero) > .container
     margin-left:auto!important;
   }
 }
+
+/* Mobile menu */
+.mobile-menu-toggle{
+  display:none;
+  align-items:center;
+  justify-content:center;
+  min-height:40px;
+  padding:0 14px;
+  border:0;
+  border-radius:999px;
+  background:var(--ref-surface-soft);
+  color:var(--ref-ink);
+  font:700 13px/1 var(--font-ui);
+  cursor:pointer;
+  transition:background-color .18s ease,color .18s ease,transform .18s ease;
+}
+.mobile-menu-toggle:hover,
+.mobile-menu-toggle:focus-visible{
+  background:var(--ref-ink);
+  color:#fff;
+}
+@media (min-width:981px){
+  .mobile-menu-toggle{display:none!important;}
+}
+@media (max-width:980px){
+  .mobile-menu-toggle{
+    display:inline-flex!important;
+    position:relative;
+    z-index:1002;
+  }
+  .header .nav-wrap{
+    justify-content:space-between!important;
+    gap:12px!important;
+  }
+  .header .header-cta{
+    margin-left:0!important;
+  }
+  .header .nav{
+    display:none!important;
+    position:absolute!important;
+    left:16px!important;
+    right:16px!important;
+    top:calc(100% + 10px)!important;
+    transform:none!important;
+    width:auto!important;
+    margin:0!important;
+    padding:12px!important;
+    border-radius:22px!important;
+    background:rgba(255,255,255,.96)!important;
+    border:1px solid var(--ref-line-soft)!important;
+    box-shadow:0 20px 60px rgba(16,32,25,.12)!important;
+    backdrop-filter:blur(18px) saturate(1.08)!important;
+    z-index:1001!important;
+  }
+  .header.mobile-menu-open .nav{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:4px!important;
+  }
+  .header.mobile-menu-open .nav a{
+    display:flex!important;
+    min-height:44px!important;
+    align-items:center!important;
+    justify-content:center!important;
+    padding:0 16px!important;
+    border-radius:14px!important;
+    color:var(--ref-ink)!important;
+    font-weight:700!important;
+  }
+  .header.mobile-menu-open .nav a:hover,
+  .header.mobile-menu-open .nav a.active{
+    background:#eef6ee!important;
+    color:var(--ref-accent)!important;
+  }
+  .header.mobile-menu-open .nav a:after{
+    display:none!important;
+  }
+  .header.mobile-menu-open .mobile-menu-toggle{
+    background:var(--ref-ink)!important;
+    color:#fff!important;
+  }
+}
