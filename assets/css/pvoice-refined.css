@@ -3312,3 +3312,122 @@ main > section:not(.hero-orenda):not(.page-banner):not(.story-hero) > .container
     width:min(280px, calc(100vw - 24px))!important;
   }
 }
+
+/* Mobile layout repair: no fixed bottom dock, compact header, safer hero/flagship spacing */
+.mobile-dock{
+  display:none!important;
+}
+@media(max-width:980px){
+  .topbar{display:none!important;}
+  .header{
+    min-height:58px!important;
+  }
+  .header .nav-wrap{
+    min-height:58px!important;
+    height:58px!important;
+    padding:7px 0!important;
+    justify-content:flex-end!important;
+    align-items:center!important;
+  }
+  .mobile-menu-toggle{
+    width:40px!important;
+    height:40px!important;
+    min-width:40px!important;
+    min-height:40px!important;
+  }
+  .mobile-menu-toggle .mobile-menu-icon,
+  .mobile-menu-toggle .mobile-menu-icon:before,
+  .mobile-menu-toggle .mobile-menu-icon:after{
+    width:17px!important;
+    height:2px!important;
+  }
+}
+@media(max-width:760px){
+  body{padding-bottom:0!important;}
+  .hero-orenda-card{
+    padding:300px 18px 24px!important;
+    min-height:auto!important;
+  }
+  .hero-orenda-content h1{
+    font-size:clamp(38px, 11.2vw, 54px)!important;
+    line-height:1!important;
+  }
+  .hero-orenda-content p{
+    font-size:16px!important;
+    line-height:1.55!important;
+    margin-top:14px!important;
+  }
+  .hero-orenda-actions{
+    gap:10px!important;
+    margin-top:20px!important;
+  }
+  .hero-orenda-btn{
+    min-height:48px!important;
+    padding:7px 7px 7px 16px!important;
+  }
+  .hero-orenda-feature{
+    margin-top:14px!important;
+    min-height:92px!important;
+  }
+
+  .fullwidth-flagship .feature-cta{
+    padding:48px 18px!important;
+  }
+  .fullwidth-flagship .feature-grid{
+    gap:24px!important;
+  }
+  .fullwidth-flagship .h2,
+  .fullwidth-flagship h2{
+    font-size:clamp(30px, 8.5vw, 42px)!important;
+    line-height:1.05!important;
+  }
+  .fullwidth-flagship .lead,
+  .fullwidth-flagship p{
+    font-size:15.5px!important;
+    line-height:1.6!important;
+  }
+  .fullwidth-flagship .flagship-actions{
+    gap:10px!important;
+    margin-top:20px!important;
+  }
+  .fullwidth-flagship .flagship-btn{
+    min-height:46px!important;
+    width:100%!important;
+  }
+  .fullwidth-flagship .flagship-panel{
+    padding:22px!important;
+    border-radius:18px!important;
+  }
+  .fullwidth-flagship .flagship-panel h3{
+    font-size:22px!important;
+    margin-bottom:14px!important;
+  }
+  .fullwidth-flagship .flagship-panel li{
+    font-size:15px!important;
+    line-height:1.45!important;
+    padding-left:16px!important;
+  }
+  .fullwidth-flagship .flagship-panel .list,
+  .fullwidth-flagship .flagship-panel ul{
+    gap:9px!important;
+  }
+
+  .persona-journey{
+    margin-top:0!important;
+  }
+  .persona-journey-copy h2{
+    font-size:clamp(32px, 9vw, 44px)!important;
+  }
+  .persona-journey-copy .persona-journey-subtitle{
+    font-size:clamp(24px, 7vw, 34px)!important;
+    line-height:1.08!important;
+  }
+}
+@media(max-width:420px){
+  .hero-orenda-card{
+    padding-top:260px!important;
+  }
+  .hero-orenda-content h1{
+    font-size:clamp(36px, 10vw, 48px)!important;
+  }
+}
