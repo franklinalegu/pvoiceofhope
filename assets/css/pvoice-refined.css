@@ -4174,3 +4174,15 @@ main > section:not(.hero-orenda):not(.page-banner):not(.story-hero) > .container
     pointer-events:auto!important;
   }
 }
+
+/* Intentional title line breaks for mission and flagship headings */
+#landing-mission-title,
+.fullwidth-flagship h2,
+#programs-feature-title{
+  text-wrap:balance;
+}
+#landing-mission-title br,
+.fullwidth-flagship h2 br,
+#programs-feature-title br{
+  display:block;
+}
