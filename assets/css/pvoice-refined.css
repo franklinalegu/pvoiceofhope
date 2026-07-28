@@ -2877,3 +2877,438 @@ main > section:not(.hero-orenda):not(.page-banner):not(.story-hero) > .container
     color:#fff!important;
   }
 }
+
+/* Mobile responsiveness refinement: tighter spacing + thumb-friendly buttons */
+@media (max-width: 900px){
+  :root{
+    --mobile-gutter: 20px;
+  }
+  .container{
+    width:min(calc(100% - var(--mobile-gutter)), var(--ref-max))!important;
+  }
+  main > section:not(.hero-orenda):not(.page-banner):not(.story-hero),
+  .fullwidth-flagship,
+  .fullwidth-pathways,
+  .story-hover-showcase,
+  .refined-stories,
+  .homepage-faq,
+  .persona-journey,
+  .pathways-process-section,
+  .simple-process-section,
+  .about-story-section,
+  .about-mission-section,
+  .about-serve-section,
+  .about-work-section,
+  .about-values-section,
+  .about-trust-section,
+  .programs-entry-section,
+  .programs-feature-section,
+  .programs-pathways-section,
+  .programs-start-section,
+  .programs-info-section,
+  .programs-cta-section,
+  .lm-intro-section,
+  .lm-roles-section,
+  .lm-flow-section,
+  .lm-commitment-section,
+  .sg-intro-section,
+  .sg-standards-section,
+  .sg-report-section,
+  .sg-flow-section,
+  .blog-list-section{
+    width:min(calc(100% - 16px), var(--ref-max))!important;
+    margin:10px auto!important;
+    border-radius:16px!important;
+  }
+  main > section:not(.hero-orenda):not(.page-banner):not(.story-hero) > .container,
+  .fullwidth-flagship > .container,
+  .fullwidth-pathways > .container,
+  .story-hover-showcase > .container,
+  .refined-stories > .container,
+  .blog-list-section > .container{
+    width:min(calc(100% - 24px), var(--ref-max))!important;
+  }
+  .intro-impact,
+  .persona-journey,
+  .simple-process-section,
+  .pathways-process-section,
+  .refined-stories,
+  .trust-section,
+  .homepage-faq,
+  .about-story-section,
+  .about-mission-section,
+  .about-serve-section,
+  .about-work-section,
+  .about-values-section,
+  .about-trust-section,
+  .programs-entry-section,
+  .programs-feature-section,
+  .programs-pathways-section,
+  .programs-start-section,
+  .programs-info-section,
+  .programs-cta-section,
+  .blog-list-section{
+    padding-block:44px!important;
+  }
+  .section,
+  .pvet-page-section{
+    padding-block:44px!important;
+  }
+  .section-head,
+  .refined-section-head,
+  .pathways-process-head,
+  .homepage-faq-copy,
+  .trust-copy,
+  .about-section-head,
+  .programs-section-head,
+  .lm-section-head,
+  .sg-section-head,
+  .blog-list-head{
+    margin-bottom:24px!important;
+  }
+  .h1,
+  h1,
+  .hero-orenda-content h1,
+  .page-banner-content h1,
+  .story-slide-title{
+    font-size:clamp(34px, 10vw, 48px)!important;
+    line-height:1!important;
+  }
+  .h2,
+  h2,
+  .story-hover-copy h2,
+  .persona-journey-copy h2,
+  .community-orbit h2,
+  .simple-process-head h2,
+  .pathways-process-head h2,
+  .pv-footer-cta h2,
+  .footer-find-place .h2,
+  .refined-section-head h2,
+  .homepage-faq-copy h2,
+  .trust-copy h2,
+  .feature-cta h2{
+    font-size:clamp(26px, 7.4vw, 36px)!important;
+    line-height:1.08!important;
+  }
+  .h3,
+  h3,
+  .card h3,
+  .process-card-body h3,
+  .simple-process-card h3,
+  .pv-footer-col h3,
+  .refined-story-card strong{
+    font-size:clamp(20px, 5.6vw, 25px)!important;
+  }
+  p,
+  .lead,
+  .hero-orenda-content p,
+  .page-banner-content p,
+  .persona-journey-copy p,
+  .story-hover-copy p,
+  .community-orbit p,
+  .homepage-faq-copy .lead,
+  .trust-copy .lead,
+  .article-body p,
+  .card p,
+  .process-card-body p,
+  .simple-process-card p,
+  .refined-story-card p,
+  .pv-footer-brand p,
+  .pv-footer-cta p{
+    font-size:15px!important;
+    line-height:1.58!important;
+  }
+}
+
+@media (max-width: 760px){
+  .nav-wrap{
+    min-height:62px!important;
+    padding-block:8px!important;
+  }
+  .mobile-menu-toggle,
+  .header .header-cta{
+    min-height:38px!important;
+    padding:0 13px!important;
+    font-size:12px!important;
+  }
+  .header.mobile-menu-open .nav{
+    top:calc(100% + 6px)!important;
+    left:10px!important;
+    right:10px!important;
+    padding:8px!important;
+  }
+  .header.mobile-menu-open .nav a{
+    min-height:40px!important;
+    font-size:13px!important;
+  }
+
+  /* Hero: more compact but readable */
+  .hero-orenda-card{
+    padding:300px 14px 16px!important;
+  }
+  .hero-orenda-content p{
+    margin-top:14px!important;
+  }
+  .hero-orenda-actions{
+    gap:9px!important;
+    margin-top:18px!important;
+  }
+  .hero-orenda-btn{
+    min-height:46px!important;
+    padding:6px 7px 6px 16px!important;
+    font-size:14px!important;
+  }
+  .hero-orenda-btn i{
+    width:34px!important;
+    height:34px!important;
+  }
+  .hero-orenda-feature{
+    min-height:88px!important;
+    grid-template-columns:62px minmax(0,1fr) 22px!important;
+    gap:8px 10px!important;
+    padding:9px!important;
+    margin-top:12px!important;
+  }
+  .hero-orenda-feature img{
+    width:62px!important;
+    height:62px!important;
+  }
+  .hero-orenda-feature strong{
+    font-size:14px!important;
+  }
+  .hero-orenda-feature small{
+    font-size:10px!important;
+  }
+
+  /* Inner page banners */
+  .page-banner-inner{
+    min-height:440px!important;
+    padding:88px 0 26px!important;
+    gap:14px!important;
+  }
+  .page-banner-card{
+    padding:18px!important;
+    border-radius:16px!important;
+  }
+
+  /* Buttons: consistent thumb targets */
+  .actions,
+  .actions.center,
+  .persona-actions,
+  .programs-entry-actions,
+  .community-orbit-actions,
+  .story-emotion-actions,
+  .belonging-actions,
+  .intro-impact-actions,
+  .pv-footer-cta-actions,
+  .footer-find-place .actions,
+  .simple-actions{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:9px!important;
+    width:100%!important;
+    margin-top:18px!important;
+  }
+  .btn,
+  .btn.light,
+  .btn.soft,
+  .btn.dark,
+  .hero-orenda-btn,
+  .footer-find-place .btn,
+  .feature-cta .btn,
+  .pv-footer-cta-actions .btn,
+  .programs-entry-actions .btn,
+  .about-trust-actions .btn,
+  .lm-actions .btn{
+    width:100%!important;
+    min-height:44px!important;
+    padding:0 16px!important;
+    justify-content:center!important;
+    font-size:14px!important;
+    border-radius:999px!important;
+  }
+
+  /* Cards / content blocks */
+  .persona-journey-visual{
+    min-height:420px!important;
+  }
+  .persona-journey-photo-main{
+    width:82%!important;
+    height:62%!important;
+  }
+  .persona-journey-photo-small{
+    width:50%!important;
+    height:34%!important;
+  }
+  .persona-journey-quote{
+    width:86%!important;
+    right:0!important;
+    top:42%!important;
+    padding:18px!important;
+  }
+  .feature-cta,
+  .programs-feature-card,
+  .about-trust-card,
+  .lm-commitment-card,
+  .programs-cta-card,
+  .footer-find-place{
+    padding:26px 18px!important;
+    border-radius:18px!important;
+  }
+  .process-pathway-card,
+  .program-pathway-card,
+  .program-start-card,
+  .about-card,
+  .lm-card,
+  .sg-card,
+  .trust-card,
+  .refined-story-card,
+  .blog-list-card,
+  .faq-item{
+    padding:20px!important;
+    border-radius:16px!important;
+  }
+  .blog-list-card figure,
+  .refined-story-card img,
+  .about-story-image img,
+  .page-photo,
+  .article-image{
+    min-height:220px!important;
+    height:220px!important;
+  }
+  .faq-q{
+    min-height:48px!important;
+    padding:14px 0!important;
+    font-size:15px!important;
+  }
+  .faq-a div{
+    padding:0 0 16px!important;
+  }
+
+  /* Footer */
+  .pv-footer-redesign{
+    padding-bottom:72px!important;
+  }
+  .pv-footer-shell{
+    padding-top:42px!important;
+  }
+  .pv-footer-card{
+    padding:22px 14px!important;
+  }
+  .footer-find-place{
+    width:calc(100% - 20px)!important;
+  }
+  .mobile-dock{
+    left:8px!important;
+    right:8px!important;
+    bottom:8px!important;
+    padding:6px!important;
+    gap:6px!important;
+  }
+  .mobile-dock a{
+    min-height:38px!important;
+    font-size:11.5px!important;
+    padding:0 4px!important;
+  }
+}
+
+@media (max-width: 420px){
+  .hero-orenda-card{
+    padding-top:270px!important;
+  }
+  .page-banner-inner{
+    min-height:400px!important;
+  }
+  main > section:not(.hero-orenda):not(.page-banner):not(.story-hero),
+  .fullwidth-flagship,
+  .fullwidth-pathways,
+  .story-hover-showcase,
+  .refined-stories,
+  .homepage-faq,
+  .persona-journey,
+  .pathways-process-section,
+  .simple-process-section,
+  .about-story-section,
+  .about-mission-section,
+  .about-serve-section,
+  .about-work-section,
+  .about-values-section,
+  .about-trust-section,
+  .programs-entry-section,
+  .programs-feature-section,
+  .programs-pathways-section,
+  .programs-start-section,
+  .programs-info-section,
+  .programs-cta-section,
+  .lm-intro-section,
+  .lm-roles-section,
+  .lm-flow-section,
+  .lm-commitment-section,
+  .sg-intro-section,
+  .sg-standards-section,
+  .sg-report-section,
+  .sg-flow-section,
+  .blog-list-section{
+    width:100%!important;
+    margin:8px 0!important;
+    border-radius:0!important;
+  }
+}
+
+/* Mobile header cleanup: remove top Join button and use proper hamburger menu */
+@media (max-width:980px){
+  .header .header-cta{
+    display:none!important;
+  }
+  .header .nav-wrap{
+    justify-content:flex-end!important;
+    min-height:62px!important;
+  }
+  .mobile-menu-toggle{
+    width:44px!important;
+    height:44px!important;
+    min-width:44px!important;
+    min-height:44px!important;
+    padding:0!important;
+    border-radius:999px!important;
+    background:var(--ref-ink)!important;
+    color:#fff!important;
+    box-shadow:none!important;
+  }
+  .mobile-menu-toggle .mobile-menu-icon,
+  .mobile-menu-toggle .mobile-menu-icon:before,
+  .mobile-menu-toggle .mobile-menu-icon:after{
+    content:"";
+    display:block;
+    width:18px;
+    height:2px;
+    border-radius:999px;
+    background:currentColor;
+    transition:transform .18s ease, opacity .18s ease;
+  }
+  .mobile-menu-toggle .mobile-menu-icon{
+    position:relative;
+  }
+  .mobile-menu-toggle .mobile-menu-icon:before,
+  .mobile-menu-toggle .mobile-menu-icon:after{
+    position:absolute;
+    left:0;
+  }
+  .mobile-menu-toggle .mobile-menu-icon:before{top:-6px;}
+  .mobile-menu-toggle .mobile-menu-icon:after{top:6px;}
+  .header.mobile-menu-open .mobile-menu-toggle .mobile-menu-icon{
+    transform:rotate(45deg);
+  }
+  .header.mobile-menu-open .mobile-menu-toggle .mobile-menu-icon:before{
+    transform:translateY(6px) rotate(90deg);
+  }
+  .header.mobile-menu-open .mobile-menu-toggle .mobile-menu-icon:after{
+    opacity:0;
+  }
+  .header.mobile-menu-open .nav{
+    top:calc(100% + 8px)!important;
+    left:auto!important;
+    right:12px!important;
+    width:min(280px, calc(100vw - 24px))!important;
+  }
+}
